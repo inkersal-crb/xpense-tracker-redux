@@ -7,12 +7,12 @@ const userSlice = createSlice({
         userName : "Inkersal",
         monthlyBudget : "5000",
         categoricalBudget: {
-            food :"3000",
-            travel :"1000",
-            entertainment :"900",
+            food : "3000",
+            travel : "1000",
+            entertainment : "900",
         },
-        editMonthlyBudget: false,
-        activeFilter: "all",
+        editMonthlyBudget : false,
+        activeFilter : "all",
     },
     reducers: {
         updateUserName: (state, action) => { 
@@ -23,6 +23,7 @@ const userSlice = createSlice({
         },
         updateCategoricalBudget: (state, action) => {
             state.categoricalBudget = {...state.categoricalBudget, ...action.payload}; 
+            state.categoricalBudget.others = state.monthlyBudget - (state.categoricalBudget.food + state.categoricalBudget.travel + state.categoricalBudget.entertainment);
         },
         updateEditMonthlyBudget: (state, action) => {
             state.editMonthlyBudget = action.payload; 
@@ -38,6 +39,7 @@ const userSlice = createSlice({
                 travel :"",
                 entertainment :"",
             };
+            state.activeFilter = "all";
         },
     }
 

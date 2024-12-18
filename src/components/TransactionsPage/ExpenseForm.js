@@ -13,7 +13,7 @@ function ExpenseForm() {
     const [expenseName, setExpenseName] = useState("");
     const [category, setCategory] = useState("");
     const [expenseAmount, setExpenseAmount] = useState("");
-    const transactionList =  useSelector((state)=> state.transaction.transactionList);
+    const transactionList =  useSelector((state)=> state.transactions.transactionList);
 
     const validateForm = () => { 
         let alertMsg = ""; 

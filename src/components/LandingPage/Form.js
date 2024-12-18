@@ -60,20 +60,22 @@ function Form() {
     return (
         <div className='budgetform'>
             <div className=''>
-                <h3 className='text-center'>Welcome to your own expense tracker</h3>
-                <h4 className='text-center'>Please fill in the below form to start tracking</h4>
+                <h2 className='text-center' style={{marginTop:"0px"}}>Welcome to your own expense tracker</h2>
+                <h3 className='text-center' style={{marginBottom:"20px"}}>Please fill in the below form to start tracking</h3>
                 <div className='budgetformBox'>
                     <form name="landing-page-form" onSubmit={handleSubmit}>
-                        <div className='inputBox'>
-                            <label htmlFor='name'>Enter your name: </label>
-                            <input type="text" id="name" className='formInput' onChange={(e)=>dispatch(updateUserName(e.target.value))} value={userName}/>
-                        </div>
-                        <div className='inputBox'>
-                            <label htmlFor='budget'>Enter your monthly budget: </label>
-                            <input type="text" id="budget" className='formInput' onChange={(e)=>dispatch(updateMonthlyBudget(parseInt(e.target.value)))} value={monthlyBudget}/>
+                        <div className='form-group'>
+                            <div className='inputBox'>
+                                <label htmlFor='name'>Enter your name </label>
+                                <input type="text" id="name" className='formInput' onChange={(e)=>dispatch(updateUserName(e.target.value))} value={userName}/>
+                            </div>
+                            <div className='inputBox'>
+                                <label htmlFor='budget'>Enter your monthly budget </label>
+                                <input type="text" id="budget" className='formInput' onChange={(e)=>dispatch(updateMonthlyBudget(parseInt(e.target.value)))} value={monthlyBudget}/>
+                            </div>
                         </div>
                         <div>
-                            <label>Fill your monthly categorical budget: </label>
+                            <label>Fill your monthly categorical budget </label>
                             <table border="1" cellSpacing="0" className='table'>
                                 <thead>
                                     <tr>
@@ -93,6 +95,7 @@ function Form() {
                                 </tbody>
                             </table>
                         </div>
+                        
                         <div className='text-center pt-1'>
                             {!editMonthlyBudget ?
                                 <button type="submit" className='btn'>Submit</button>

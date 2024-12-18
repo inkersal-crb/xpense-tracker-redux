@@ -7,7 +7,7 @@ const store = configureStore({
   reducer: {
     user : userSlice,
     expense: expenseSlice,
-    transaction: transactionSlice,
+    transactions: transactionSlice,
   },
 });
 

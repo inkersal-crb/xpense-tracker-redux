@@ -6,7 +6,7 @@ import { updateTotalExpense, updateCategoricalExpense } from '../../redux/expens
  
 function ExpensesList() {
 
-    const transactionList = useSelector((state) => state.transaction.transactionList);
+    const transactionList = useSelector((state) => state.transactions.transactionList);
     
     const [transactions, setTransactions] = useState([...transactionList]);
     const filterCategory = useSelector((state) => state.user.activeFilter);
@@ -47,7 +47,7 @@ function ExpensesList() {
                         <tr key={index}>
                             <td>{index+1}</td>
                             <td>{transaction.name}</td>
-                            <td>{transaction.category}</td>
+                            <td>{transaction.category[0].toUpperCase()+transaction.category.slice(1)}</td>
                             <td>{transaction.amount}</td>
                             <td><button type='button' className='btn' onClick={()=>deleteEntry(transaction.id, transaction.amount, transaction.category)}>Delete</button></td>
                         </tr>
