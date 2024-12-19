@@ -55,7 +55,7 @@ function ExpenseForm() {
         }
     };
     return (
-        <div style={{margin: "40px 0px"}}>
+        <div>
             <h3 className='title'>New Expense Form</h3>
             <form onSubmit={handleSubmit} className='expense-form1'>
                 <div style={{display:"flex", gap:"40px", }}>

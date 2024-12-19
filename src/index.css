@@ -12,11 +12,14 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    margin : 0px auto;
 }
 main >* {    
     width: 60%;
     background-color: #fff;
     padding: 50px;
+    margin : 0px auto;
 }
 .btn{
     padding: 12px 24px;

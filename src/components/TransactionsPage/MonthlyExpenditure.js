@@ -23,7 +23,7 @@ function MonthlyExpenditure() {
     }
     
     return (
-        <div className='p-2'>
+        <div>
             <table className='table' cellSpacing="0" border="1">
                 <thead>
                     <tr>
